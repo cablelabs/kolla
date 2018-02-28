@@ -12,7 +12,6 @@ install:
 
 script:
   - echo "no tests!" # put your normal testing scripts here
-  - cd client && npm install && npm run build && cd ..
 
 after_success:
   - echo "execute nothing. # These are the scripts for post execution
