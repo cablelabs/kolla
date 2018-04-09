@@ -9,6 +9,7 @@ services:
 
 install:
   - echo "install nothing!" # put your normal pre-testing installs here
+  - pip install requests
 
 script:
   - echo "no tests!" # put your normal testing scripts here
