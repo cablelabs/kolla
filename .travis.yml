@@ -1,0 +1,20 @@
+sudo: required #is required to use docker service in travis
+
+language: python
+python:
+  - "2.7"
+
+services:
+  - docker # required, but travis uses older version of docker :(
+
+install:
+  - echo "install nothing!" # put your normal pre-testing installs here
+
+script:
+  - echo "no tests!" # put your normal testing scripts here
+
+after_success:
+  - python tools/build.py -b ubuntu -t source  
+  - echo "execute nothing. # These are the scripts for post execution
+  
+# sadly, travis doesn't cache docker builds yet, so each build will take a while :-(
