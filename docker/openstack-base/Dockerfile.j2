@@ -398,7 +398,7 @@ RUN ln -s openstack-base-source/* /requirements \
     && mkdir -p /var/lib/kolla \
     && {{ macros.install_pip(['virtualenv'], constraints = false)}} \
     && virtualenv --system-site-packages /var/lib/kolla/venv
-
+RUN echo "APT::Get::AllowUnauthenticated "true";" > /etc/apt/apt.conf.d/99myown
 ENV PATH /var/lib/kolla/venv/bin:$PATH
 
 RUN {{ macros.install_pip(openstack_base_pip_packages | customizable("pip_packages")) }}
