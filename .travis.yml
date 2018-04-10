@@ -18,7 +18,6 @@ install:
   - sudo pip install oslo_config
   - sudo pip install ansible
   - sudo apt-get install python2.7-dev
-  - sudo apt install tox
   - tox -e genconfig
 
 script:
