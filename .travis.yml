@@ -13,7 +13,6 @@ install:
   - pip install tox
   - pip install requests
   - pip install docker
-  - pip install git
   - pip install gitpython
   - sudo pip install jinja2
   - sudo pip install oslo_config
