@@ -8,13 +8,23 @@ services:
   - docker # required, but travis uses older version of docker :(
 
 install:
-  - echo "install nothing!" # put your normal pre-testing installs here
+  - echo "install deps!" # put your normal pre-testing installs here
+  - pip install tox
   - pip install requests
+  - pip install docker
+  - pip install --upgrade pip
+  - sudo pip install gitpython
+  - sudo pip install jinja2
+  - sudo pip install oslo_config
+  - sudo pip install ansible
+  - apt-get install python-dev
+  - tox -e genconfig
 
 script:
   - echo "no tests!" # put your normal testing scripts here
 
 after_success:
+  - echo "Running kolla-build
   - python tools/build.py -b ubuntu -t source  
   - echo "execute nothing. # These are the scripts for post execution
   
