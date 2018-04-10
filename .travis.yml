@@ -17,7 +17,8 @@ install:
   - sudo pip install jinja2
   - sudo pip install oslo_config
   - sudo pip install ansible
-  - apt-get install python-dev
+  - sudo apt-get install python2.7-dev
+  - sudo apt install tox
   - tox -e genconfig
 
 script:
