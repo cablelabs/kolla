@@ -9,11 +9,12 @@ services:
 
 install:
   - echo "install deps!" # put your normal pre-testing installs here
+  - pip install --upgrade pip
   - pip install tox
   - pip install requests
   - pip install docker
-  - pip install --upgrade pip
-  - sudo pip install gitpython
+  - pip install git
+  - pip install gitpython
   - sudo pip install jinja2
   - sudo pip install oslo_config
   - sudo pip install ansible
