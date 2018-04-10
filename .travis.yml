@@ -14,9 +14,9 @@ install:
   - pip install requests
   - pip install docker
   - pip install gitpython
-  - sudo pip install jinja2
-  - sudo pip install oslo_config
-  - sudo pip install ansible
+  - pip install jinja2
+  - pip install oslo_config
+  - pip install ansible
   - sudo apt-get install python2.7-dev
   - tox -e genconfig
 
